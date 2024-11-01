@@ -1,0 +1,5 @@
+# Ignore the cache folder
+cache/
+
+# Ignore the Iceland outline GeoPackage file
+iceland_outline.gpkg
