@@ -21,3 +21,5 @@ Hægt er að lesa meira um skrofur [hér](https://nmsi.is/molar/fugl_manadarins/
 
 ### License
 Þetta efni er birt undir **Creative Commons CC BY 4.0** leyfi.
+
+![Day 5 - A Journey](Day05-Journey.jpeg)

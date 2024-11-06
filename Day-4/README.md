@@ -22,3 +22,5 @@ Learn more about Nootka Lupine on the [Náttúrufræðistofnun website](https://
 ### License and Citation
 - **License**: This map is published under **Creative Commons CC BY 4.0**.
 - **Citation**: "*Credits: Náttúrufræðistofnun*"
+
+![Day 4 - Hexagons](Day04-Hexagons.png)

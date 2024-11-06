@@ -15,3 +15,5 @@ This map focuses on **lines**, showcasing the road network and building outlines
 ---
 
 **License**: Creative Commons **CC BY 4.0**
+
+![Day 2 - Lines](Day02-Lines.png)
