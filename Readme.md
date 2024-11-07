@@ -32,7 +32,7 @@ Each day of the challenge presents a unique theme. Below, you can find links to 
 | 4 | Hexagons | Visualize spatial patterns with hexagonal grids, a fun twist on density mapping. 🔷 | ![Day 4](Day-4/Day04-Hexagons.png) |
 | 5 | A journey | Map any journey, tracing movement from one place to another. 🚶‍♂️✈️ | ![Day 5](Day-5/Day05-Journey.jpeg) |
 | 6 | Raster | Focus on grids and pixels, showcasing raster data like satellite imagery or heatmaps. 🟦🟧 | ![Day 6](Day-6/Day06-Raster.png) |
-| 7 | Vintage style | Create a vintage-style map, using classic elements to map something modern. 🕰️🗺️ | ![Day 7](Day-7/Day07-Vintage-style.png) |
+| 7 | Vintage style | Create a vintage-style map, using classic elements to map something modern. 🕰️🗺️ | ![Day 7](Day-7/Day07-Vintage.jpg) |
 | 8 | Humanitarian Data Exchange (HDX) | Map humanitarian topics using data from HDX, focusing on social good. 🌍🚑 | ![Day 8](Day-8/Day08-HDX.png) |
 | 9 | AI only | Use AI tools like DALL-E or ChatGPT to generate map content. Challenge prompt creativity! | ![Day 9](Day-9/Day09-AI-only.png) |
 | 10 | Pen & paper | Go analog with a hand-drawn map. It’s about the creative process! ✏️🗺️ | ![Day 10](Day-10/Day10-Pen-paper.png) |
