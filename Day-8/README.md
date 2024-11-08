@@ -3,7 +3,7 @@
 # 🌍 #30DagaKortakeppni - Dagur 8: Humanitarian Data Exchange (HDX)
 **Kort fyrir dag 8 í #30DagaKortakeppni 2024 fyrir Náttúrufræðistofnun**
 
-| [➡️ Skoða kort](html/index.html) |
+| [➡️ Skoða kort](https://m-lmi.github.io/30DayMapChallenge/Day-8/index.html) |
 |---------------------------|
 
 
@@ -40,7 +40,7 @@
 
 **Map for day 8 of the [#30DayMapChallenge](https://30daymapchallenge.com/) 2024 for Náttúrufræðistofnun**
 
-| [➡️ Go to Interactive Map](html/index.html) |
+| [➡️ Go to Interactive Map](https://m-lmi.github.io/30DayMapChallenge/Day-8/index.html) |
 |---------------------------|
 
 ### English Description
@@ -73,4 +73,4 @@ The **Social Connectedness Index (SCI)** is calculated based on an anonymized sn
 This interactive map is a simple yet powerful representation of how data networks can visually showcase links and interactions across geographies, highlighting Iceland’s social connections worldwide.
 
 ## Click on image to get  to the interactive map!
-[![Day 8 - Data: HDX](Day08-HDX.png)](html/index.html)
+[![Day 8 - Data: HDX](Day08-HDX.png)](https://m-lmi.github.io/30DayMapChallenge/Day-8/index.html)
