@@ -72,4 +72,5 @@ The **Social Connectedness Index (SCI)** is calculated based on an anonymized sn
 
 This interactive map is a simple yet powerful representation of how data networks can visually showcase links and interactions across geographies, highlighting Iceland’s social connections worldwide.
 
-![Day 8 - Data: HDX](Day08-HDX.png)
+## Click on image to get  to the interactive map!
+[![Day 8 - Data: HDX](Day08-HDX.png)](html/index.html)
