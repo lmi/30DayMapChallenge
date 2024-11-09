@@ -34,7 +34,7 @@ Each day of the challenge presents a unique theme. Below, you can find links to 
 | 6 | Raster | Focus on grids and pixels, showcasing raster data like satellite imagery or heatmaps. 🟦🟧 | ![Day 6](Day-6/Day06-Raster.png) |
 | 7 | Vintage style | Create a vintage-style map, using classic elements to map something modern. 🕰️🗺️ | ![Day 7](Day-7/Day07-Vintage.jpg) |
 | 8 | Humanitarian Data Exchange (HDX) | Map humanitarian topics using data from HDX, focusing on social good. 🌍🚑 | [![Day 8 - Data: HDX](Day-8/Day08-HDX.png)](https://m-lmi.github.io/30DayMapChallenge/Day-8/index.html) |
-| 9 | AI only | Use AI tools like DALL-E or ChatGPT to generate map content. Challenge prompt creativity! | ![Day 9](Day-9/Day09-AI-only.png) |
+| 9 | AI only | Use AI tools like DALL-E or ChatGPT to generate map content. Challenge prompt creativity! | ![Day 9](Day-9/Day09-AI_only.png) |
 | 10 | Pen & paper | Go analog with a hand-drawn map. It’s about the creative process! ✏️🗺️ | ![Day 10](Day-10/Day10-Pen-paper.png) |
 | 11 | Arctic | Focus on the Arctic, mapping ice coverage, habitats, or climate change. ❄️🧊 | ![Day 11](Day-11/Day11-Arctic.png) |
 | 12 | Time and space | Show the relationship between time and geography with a time-focused map. ⏳🌍 | ![Day 12](Day-12/Day12-Time-space.png) |
