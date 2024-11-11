@@ -40,5 +40,5 @@ Polar bears occasionally come ashore in Iceland, usually due to sea ice carrying
 
 This map highlights the fascinating historical interactions between Iceland and polar bears, illustrating fluctuations in bear sightings related to changing sea ice patterns.
 
-![Day 11 - Arctic](Day11-Arctic.jpg)
+![Day 11 - Arctic](Day11-Arctic.jpg) 
 
