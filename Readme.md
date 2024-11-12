@@ -37,7 +37,7 @@ Each day of the challenge presents a unique theme. Below, you can find links to 
 | 9 | AI only | Use AI tools like DALL-E or ChatGPT to generate map content. Challenge prompt creativity! | ![Day 9](Day-9/Day09-AI_only.png) |
 | 10 | Pen & paper | Go analog with a hand-drawn map. It’s about the creative process! ✏️🗺️ | ![Day 10](Day-10/Day10-penandpaper.jpg) |
 | 11 | Arctic | Focus on the Arctic, mapping ice coverage, habitats, or climate change. ❄️🧊 | ![Day 11](Day-11/Day11-Arctic.jpg) |
-| 12 | Time and space | Show the relationship between time and geography with a time-focused map. ⏳🌍 | ![Day 12](Day-12/Day12-TimeAndSpace.png) |
+| 12 | Time and space | Show the relationship between time and geography with a time-focused map. ⏳🌍 | ![Day 12](Day-12/Day12-Time_Space.png) |
 | 13 | A new tool | Try a new tool, software, or technique for mapping. The challenge is to experiment! 🧪🔧 | ![Day 13](Day-13/Day13-New-tool.png) |
 | 14 | A world map | Map the whole world, focusing on continents, ecosystems, or oceans. 🌍 | ![Day 14](Day-14/Day14-World-map.png) |
 | 15 | My data | Make it personal by mapping data from your own life. 🗒️ | ![Day 15](Day-15/Day15-My-data.png) |

@@ -39,4 +39,4 @@ Here lies **Breiðamerkurjökull**, once a vast, sprawling glacier that shaped t
 
 This map reveals the story of Iceland's glaciers, capturing their slow retreat over time and their significance in the natural and cultural landscape of Iceland.
 
-![Day 12 - Time and Space](Day12-TimeAndSpace.png) 
+![Day 12 - Time and Space](Day12-Time_Space.png) 
