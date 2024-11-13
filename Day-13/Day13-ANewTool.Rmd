@@ -1,0 +1,215 @@
+---
+title: "Iceland Municipalities Cartogram by Population"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Day 13 - A New Tool
+
+The new tool is R and here we make a cartogram of the municipalities based on the population in different years.
+
+You can find the geojson of the municipalities here: <https://gis.natt.is/geoserver/IS_50V/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=IS_50V%3Amork_sveitarf_flakar&maxFeatures=100000&outputFormat=application%2Fjson>
+
+\
+You find the population data here: <https://px.hagstofa.is/pxis/pxweb/is/Ibuar/Ibuar__mannfjoldi__2_byggdir__sveitarfelog/MAN02005.px>
+
+## Install Packages
+
+```{r}
+# Check and install required packages
+packages <- c("sf", "dplyr", "readxl", "cartogram", "ggplot2", "gganimate", "magick")
+
+# Install missing packages
+installed_packages <- installed.packages()
+for (pkg in packages) {
+  if (!pkg %in% installed_packages) {
+    install.packages(pkg)
+  }
+}
+
+# Load all packages
+lapply(packages, library, character.only = TRUE)
+```
+
+you can also load the packages like this:
+
+```{r}
+# Load necessary libraries
+library(sf)
+library(readxl)
+# For cartogram
+library(cartogram)
+library(ggplot2)
+library(dplyr)
+# For video part
+library(gganimate)
+library(magick)
+library(knitr)
+```
+
+## Load the population data
+
+We assume the data has 1998 to 2024 year data to select
+
+```{r}
+# Load population data from Excel file
+population_data <- read_excel("MAN02005_20241112-134452.xlsx", sheet = 1)
+population_data <- population_data %>%
+  select(Municipality = `Municipality`, starts_with("19"), starts_with("20"))
+```
+
+## Load the municipality polygons
+
+We filter only the columns we need.
+
+```{r}
+# Load Icelandic municipality boundaries from GeoJSON, selecting only the required columns
+municipalities <- st_read("mork_sveitarf_flakar.json") %>%
+  select(id, nrsveitarfelags, sveitarfelag, geometry)
+
+colnames(municipalities)
+st_crs(municipalities)
+
+# Transform to EPSG:3057 (ISN93 / Lambert Conformal Conic for Iceland)
+municipalities_projected <- st_transform(municipalities, crs = 3857)
+```
+
+## Merge the datasets: Give population to the municipality polygons
+
+```{r}
+# Assuming 'population_data' is already loaded and prepared
+# Merge spatial data with population data
+merged_data <- municipalities_projected %>%
+  left_join(population_data, by = c("sveitarfelag" = "Municipality"))
+```
+
+## Generate the cartogram
+
+```{r}
+# Generate cartogram based on 2024 population
+cartogram_data <- cartogram_cont(merged_data, weight = "2024")
+```
+
+## Plot the cartogram for 2024
+
+```{r plot-cartogram, echo=TRUE, fig.width=10, fig.height=8}
+# Plot the cartogram
+ggplot(cartogram_data) +
+  geom_sf(aes(fill = Population_2024)) +
+  scale_fill_viridis_c(option = "magma") +
+  theme_minimal() +
+  labs(title = "Icelandic Municipalities by Population in 2024",
+       fill = "Population")
+```
+
+## View the data table (if needed)
+
+```{r}
+View(cartogram_data)
+```
+
+## Let's make it for each year (like frames for a video)
+
+```{r}
+# Define years for which we want to create cartograms
+years <- as.character(2019:2024)
+cartogram_frames <- list()
+
+for (year in years) {
+  # Merge the spatial data with population data for the current year
+  merged_data <- municipalities %>%
+    left_join(population_data %>% select(Municipality, Population = !!sym(year)),
+              by = c("sveitarfelag" = "Municipality"))
+  
+  # Project the data for cartogram creation
+  merged_data_projected <- st_transform(merged_data, crs = 3857)
+  
+  # Create cartogram
+  cartogram_data <- cartogram_cont(merged_data_projected, weight = "Population")
+  
+  # Create plot
+  p <- ggplot(cartogram_data) +
+    geom_sf(aes(fill = Population)) +
+    scale_fill_viridis_c(option = "magma") +
+    theme_minimal() +
+    labs(title = paste("Icelandic Municipalities by Population -", year),
+         fill = "Population")
+  
+  # Save plot as a frame in the list
+  cartogram_frames[[year]] <- p
+}
+
+```
+
+```{r}
+View(cartogram_frames)
+```
+
+## Save and Load processed data
+
+```{r}
+# Save the list of cartogram frames to a file
+saveRDS(cartogram_frames, file = "cartogram_frames.rds")
+```
+
+```{r}
+# Load the saved RDS data
+cartogram_frames <- readRDS("cartogram_frames.rds")
+```
+
+## Adapting the styling and make GIF
+
+```{r}
+# Directory to save PNG files
+output_dir <- "frames/"
+dir.create(output_dir, showWarnings = FALSE)
+
+# Save each frame as a PNG file with a year label, adjusted color scale, white background, and no axis labels
+for (i in seq_along(cartogram_frames)) {
+  year <- names(cartogram_frames)[i]
+  file_path <- file.path(output_dir, paste0("cartogram_", year, ".png"))
+  
+  # Modify the plot to add the year label, remove grid and axis labels, add white background, and adjust color scale
+  p <- cartogram_frames[[year]] +
+    annotate("text", x = Inf, y = Inf, label = year, color = "orange", 
+             size = 6, hjust = 1.1, vjust = 1.1, fontface = "bold") +
+    theme_minimal() +
+    theme(
+      panel.grid = element_blank(),          # Remove grid lines
+      axis.title = element_blank(),          # Remove axis titles
+      axis.text = element_blank(),           # Remove axis text
+      axis.ticks = element_blank(),          # Remove axis ticks
+      panel.background = element_rect(fill = "lightblue", color = NA)
+    ) +
+    scale_fill_viridis_c(option = "magma")  # Accent low values
+  
+  # Save each ggplot frame as a PNG file
+  ggsave(file_path, plot = p, width = 10, height = 8, dpi = 150, bg = "white")
+}
+
+# Load the images from C:/frames into magick and combine them into an animation
+file_paths <- list.files(output_dir, pattern = "cartogram_.*\\.png$", full.names = TRUE)
+file_paths <- sort(file_paths)  # Ensure they are ordered by year
+
+# Create the GIF animation
+animation <- image_read(file_paths) %>%
+  image_animate(fps = 2)
+
+gif = "Day13-ANewTool.gif"
+
+# Save the GIF
+image_write(animation, gif)
+```
+
+## Show the GIF
+
+```{r, echo=FALSE}
+# Load and display the GIF
+animation <- image_read(gif)
+
+# Show the GIF inline
+include_graphics(gif)
+```
