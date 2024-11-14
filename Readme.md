@@ -39,7 +39,7 @@ Each day of the challenge presents a unique theme. Below, you can find links to 
 | 11 | Arctic | Focus on the Arctic, mapping ice coverage, habitats, or climate change. ❄️🧊 | ![Day 11](Day-11/Day11-Arctic.jpg) |
 | 12 | Time and space | Show the relationship between time and geography with a time-focused map. ⏳🌍 | ![Day 12](Day-12/Day12-Time_Space.png) |
 | 13 | A new tool | Try a new tool, software, or technique for mapping. The challenge is to experiment! 🧪🔧 | ![Day 13](Day-13/Day13-ANewTool.gif) |
-| 14 | A world map | Map the whole world, focusing on continents, ecosystems, or oceans. 🌍 | ![Day 14](Day-14/Day14-World-map.png) |
+| 14 | A world map | Map the whole world, focusing on continents, ecosystems, or oceans. 🌍 | ![Day 14](Day-14/Day14-WorldMap.jpg) |
 | 15 | My data | Make it personal by mapping data from your own life. 🗒️ | ![Day 15](Day-15/Day15-My-data.png) |
 | 16 | Choropleth | Use color to show data variation across regions with a classic choropleth map. 🎨 | ![Day 16](Day-16/Day16-Choropleth.png) |
 | 17 | Collaborative map | Collaborate with others to create a single map. 🤝🗺️ | ![Day 17](Day-17/Day17-Collaborative-map.png) |
