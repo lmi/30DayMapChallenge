@@ -44,4 +44,4 @@ The **Gulf Stream**, which begins in the Caribbean and flows north along the eas
 
 This map offers a global perspective on ocean currents, highlighting the Spilhaus projection’s unique view and the influence of currents like the Gulf Stream on Iceland's climate.
 
-![Day 14 - World Map](Day14-WorldMap.jpg) 
+![Day 14 - World Map](Day14-AWorldMap.jpg) 
