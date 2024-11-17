@@ -40,9 +40,9 @@ Each day of the challenge presents a unique theme. Below, you can find links to 
 | 12 | Time and space | Show the relationship between time and geography with a time-focused map. ⏳🌍 | ![Day 12](Day-12/Day12-Time_Space.png) |
 | 13 | A new tool | Try a new tool, software, or technique for mapping. The challenge is to experiment! 🧪🔧 | ![Day 13](Day-13/Day13-ANewTool.gif) |
 | 14 | A world map | Map the whole world, focusing on continents, ecosystems, or oceans. 🌍 | ![Day 14](Day-14/Day14-AWorldMap.jpg) |
-| 15 | My data | Make it personal by mapping data from your own life. 🗒️ | ![Day 15](Day-15/Day15-My-data.png) |
-| 16 | Choropleth | Use color to show data variation across regions with a classic choropleth map. 🎨 | ![Day 16](Day-16/Day16-Choropleth.png) |
-| 17 | Collaborative map | Collaborate with others to create a single map. 🤝🗺️ | ![Day 17](Day-17/Day17-Collaborative-map.png) |
+| 15 | My data | Make it personal by mapping data from your own life. 🗒️ | ![Day 15](Day-15/Day15-MyData.jpg) |
+| 16 | Choropleth | Use color to show data variation across regions with a classic choropleth map. 🎨 | ![Day 16](Day-16/Day16-Choropleth.jpg) |
+| 17 | Collaborative map | Collaborate with others to create a single map. 🤝🗺️ | ![Day 17](Day-17/Day17-CollaborativeMap.jpeg) |
 | 18 | 3D | Add depth by mapping in 3D, showcasing elevation or structures. 🎢🏔️ | ![Day 18](Day-18/Day18-3D.png) |
 | 19 | Typography | Let text do the work with a typography-focused map. ✍️🅰️ | ![Day 19](Day-19/Day19-Typography.png) |
 | 20 | OpenStreetMap | Use OpenStreetMap data to create a map. 🗺️📍 | ![Day 20](Day-20/Day20-OSM.png) |
