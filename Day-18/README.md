@@ -5,9 +5,9 @@
 ---
  
 ### Íslenska
-**Þrívíddarsýning af Vestfjörðum í fornlegum stíl**
+**Þrívíddarsýning af Vestfjörðum í fornum stíl**
  
-Þetta kort er þrívíddarmynd af Vestfjörðum, búið til í fornum stíl. Kortið var gert með [ÍslandsDEM](https://dem.gis.is/) frá Náttúrufræðistofnun og leiðbeiningum Joe Davis fyrir **GeoBlender** ([leiðbeiningar hér](https://github.com/joewdavies/geoblender)). Í vinnslu var notað **Blender 4.2**.
+Þetta kort er þrívíddarmynd af Vestfjörðum, búið til í fornum stíl. Kortið var gert með [ÍslandsDEM](https://dem.gis.is/) frá Náttúrufræðistofnun og leiðbeiningum Joe Davis fyrir **GeoBlender** ([leiðbeiningar hér](https://github.com/joewdavies/geoblender)). Við vinnslu myndarinnar var notað **Blender 4.2**.
  
 Vestfirðir eru einstakir að því leyti að þeir eru elsti hluti Íslands, með berg sem er meira en 10-15 milljón ára gamalt. Þetta berg hefur orðið fyrir gríðarlegu rofi af völdum íss og sjávar á milljónum ára, skapað djúpa firði og brattar hlíðar sem einkenna svæðið í dag. Ísland, sem myndaðist vegna eldvirkni á Atlantshafshryggnum, er eitt yngsta land jarðar og býður upp á einstakt tækifæri til að skoða samspil jarðfræði og landmótunar.
  
