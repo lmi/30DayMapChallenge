@@ -35,7 +35,7 @@ Users can try out the examples themselves by running the project in **Kaggle** o
 
 ---
 
-### Design Credits
+### Design Credits 
 - **Author**: Marco Pizzolato
 - **Font**: [Eagle Lake](https://fonts.google.com/specimen/Eagle+Lake)
 - **Data Sources**: [Örnefni](https://gatt.natt.is/geonetwork/srv/ice/catalog.search#/metadata/AED93950-4043-4D42-B8F8-C118611F33C9) and [Strandlína](https://gatt.natt.is/geonetwork/srv/ice/catalog.search#/metadata/FE3E66F8-7749-409A-8795-02207CE27613) from Náttúrufræðistofnun
