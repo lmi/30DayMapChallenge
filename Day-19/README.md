@@ -50,4 +50,4 @@ Users can try out the examples themselves by running the project in **Kaggle** o
 This word cloud map provides a typographic exploration of Iceland’s placenames, blending data visualization with geographical storytelling.
 
 
-![Day 19 - Typography](Day19-Typography_EN.png)
+![Day 19 - Typography](Day19-Typography_EN.png) 
