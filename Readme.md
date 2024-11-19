@@ -44,7 +44,7 @@ Each day of the challenge presents a unique theme. Below, you can find links to 
 | 16 | Choropleth | Use color to show data variation across regions with a classic choropleth map. 🎨 | ![Day 16](Day-16/Day16-Choropleth.jpg) |
 | 17 | Collaborative map | Collaborate with others to create a single map. 🤝🗺️ | ![Day 17](Day-17/Day17-CollaborativeMap.jpeg) |
 | 18 | 3D | Add depth by mapping in 3D, showcasing elevation or structures. 🎢🏔️ | ![Day 18](Day-18/Day18-3D.png) | 
-| 19 | Typography | Let text do the work with a typography-focused map. ✍️🅰️ | ![Day 19](Day-19/Day19-Typography.png) |
+| 19 | Typography | Let text do the work with a typography-focused map. ✍️🅰️ | ![Day 19](Day-19/Day19-Typography_ISL.png) |
 | 20 | OpenStreetMap | Use OpenStreetMap data to create a map. 🗺️📍 | ![Day 20](Day-20/Day20-OSM.png) |
 | 21 | Conflict | Map a conflict, highlighting boundaries, tensions, or outcomes. ⚔️🛑 | ![Day 21](Day-21/Day21-Conflict.png) |
 | 22 | 2 colours | Restrict yourself to only 2 colors for a minimalist map. | ![Day 22](Day-22/Day22-2-colours.png) |
