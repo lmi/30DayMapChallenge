@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OSM Sneak Peek Game</title>
+    <link href="https://cdn.osmbuildings.org/4.1.1/OSMBuildings.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Prata&display=swap" rel="stylesheet">
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            background: black;
+            font-family: 'Prata', serif;
+            color: white;
+        }
+
+        /* Title styling */
+        #title {
+            position: absolute;
+            top: 20px;
+            width: 100%;
+            text-align: center;
+            color: white;
+            font-size: 1.8em;
+            z-index: 1000; /* Ensures the title appears above the map */
+        }
+
+        #map {
+            width: 100%;
+            height: 100%;
+            max-width: 800px; /* Set maximum width */
+            max-height: 800px; /* Set maximum height */
+            clip-path: circle(0% at 50% 50%); /* Start with a tiny circle */
+            -webkit-clip-path: circle(0% at 50% 50%);
+            position: absolute;
+            left: 50%;
+            top: 45%;
+            transform: translate(-50%, -50%); /* Center the map on the screen */
+            transition: clip-path 2s ease-in-out, -webkit-clip-path 2s ease-in-out; /* Smooth animation */
+        }
+
+        /* Ensure buildings extend outside the circle */
+        #map-container {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            overflow: visible; /* Allow 3D buildings to overflow the map container */
+        }
+
+        #game-container {
+            position: absolute;
+            bottom: 80px;
+            width: 100%;
+            text-align: center;
+            z-index: 1000;
+        }
+
+        #options {
+            margin: 10px auto;
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        .option {
+            background: white;
+            color: black;
+            border: none;
+            padding: 10px 20px;
+            font-size: 1em;
+            cursor: pointer;
+            border-radius: 20px;
+            font-family: 'Prata', serif;
+        }
+
+        .option:hover {
+            background: gray;
+            color: white;
+        }
+
+        #next-btn {
+            display: none;
+            position: absolute;
+            bottom: 40px;
+            left: 50%;
+            transform: translateX(-50%);
+            padding: 10px 20px;
+            font-size: 1em;
+            background: #4caf50;
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+            z-index: 1000;
+        }
+
+        #feedback {
+            margin-top: 10px;
+            font-size: 1.6em;
+        }
+
+        #feedback-container {
+            position: absolute;
+            bottom: 170px;
+            width: 100%;
+            text-align: center;
+            z-index: 1000;
+        }
+
+        #button-container {
+            position: absolute;
+            bottom: 5px;
+            width: 100%;
+            text-align: center;
+            z-index: 1000;
+        }
+
+        #next-btn {
+            display: none;
+            padding: 5px 5px;
+            font-size: 1em;
+            background: #4caf50;
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        #next-btn:hover {
+            background: #439144;
+        }
+
+        /* Footer styling */
+        #footer {
+            position: absolute;
+            bottom: 10px;
+            width: 100%;
+            text-align: center;
+            color: white;
+            font-size: 0.7em;
+            z-index: 1000; /* Ensures the footer appears above the map */
+        }
+
+        #footer a {
+            color: white;
+            text-decoration: underline;
+        }
+
+        /* Animation to expand the circle */
+        .circle-expand #map{
+            clip-path: circle(40% at 50% 50%); /* Final circle size */
+            -webkit-clip-path: circle(40% at 50% 50%);
+        }
+    </style>
+</head>
+<body>
+    <div id="title">A Sneak Peek into the World of OpenStreetMap</div>
+
+    <div id="map-container">
+        <div id="map"></div>
+    </div>
+
+    <div id="game-container">
+        <div id="options"></div>
+    </div>
+
+    <div id="feedback-container">
+        <div id="feedback"></div>
+    </div>
+
+    <div id="button-container">
+        <button id="next-btn">Next Destination</button>
+    </div>
+
+    <div id="footer">
+        #30DayMapChallenge | Author: Marco Pizzolato | Data: 
+        <a href="https://www.openstreetmap.org/copyright" target="_blank">OpenStreetMap</a> and 
+        <a href="https://osmbuildings.org/copyright/" target="_blank">OSM Buildings</a>
+    </div>
+
+    <script src="https://cdn.osmbuildings.org/4.1.1/OSMBuildings.js"></script>
+    <script>
+        // Add a class to trigger the animation after the page loads
+        window.onload = () => {
+            document.body.classList.add('circle-expand');
+        };
+
+        const locations = [
+            { name: 'Reykjavík', coords: { latitude: 64.1355, longitude: -21.8954 } },
+            { name: 'Akureyri', coords: { latitude: 65.6835, longitude: -18.0878 } },
+            { name: 'Egilsstaðir', coords: { latitude: 65.2670, longitude: -14.3947 } },
+            { name: 'Húsavík', coords: { latitude: 66.0449, longitude: -17.3387 } },
+            { name: 'Selfoss', coords: { latitude: 63.9330, longitude: -20.9971 } },
+            { name: 'Vík í Mýrdal', coords: { latitude: 63.4198, longitude: -19.0063 } },
+            { name: 'Ísafjörður', coords: { latitude: 66.0740, longitude: -23.1212 } },
+            { name: 'Seyðisfjörður', coords: { latitude: 65.2633, longitude: -14.0161 } },
+            { name: 'Borgarnes', coords: { latitude: 64.5376, longitude: -21.9192 } },
+            { name: 'Keflavík', coords: { latitude: 64.0047, longitude: -22.5614 } },
+            { name: 'Grindavík', coords: { latitude: 63.8420, longitude: -22.4438 } },
+            { name: 'Hafnarfjörður', coords: { latitude: 64.0686, longitude: -21.9379 } },
+            { name: 'Hvolsvöllur', coords: { latitude: 63.7552, longitude: -20.2346 } },
+            { name: 'Flúðir', coords: { latitude: 64.1333, longitude: -20.3094 } },
+            { name: 'Stykkishólmur', coords: { latitude: 65.0730, longitude: -22.7251 } },
+            { name: 'Hella', coords: { latitude: 63.8376, longitude: -20.3988 } },
+            { name: 'Eskifjörður', coords: { latitude: 65.0763, longitude: -14.0108 } },
+            { name: 'Dalvík', coords: { latitude: 65.9703, longitude: -18.5308 } },
+            { name: 'Ólafsvík', coords: { latitude: 64.8941, longitude: -23.7094 } },
+            { name: 'Patreksfjörður', coords: { latitude: 65.5967, longitude: -23.9954 } },
+            { name: 'Höfn', coords: { latitude: 64.2531, longitude: -15.2120 } },
+            { name: 'Mosfellsbær', coords: { latitude: 64.1696, longitude: -21.6920 } },
+            { name: 'Kópavogur', coords: { latitude: 64.1129, longitude: -21.8620 } },
+            { name: 'Garðabær', coords: { latitude: 64.0889, longitude: -21.8803 } },
+            { name: 'Thingvellir National Park', coords: { latitude: 64.2550, longitude: -21.1290 } },
+            { name: 'Jökulsárlón', coords: { latitude: 64.0485, longitude: -16.1791 } },
+            { name: 'Geysir', coords: { latitude: 64.3104, longitude: -20.3024 } },
+            { name: 'Laugarvatn', coords: { latitude: 64.2177, longitude: -20.7327 } },
+            { name: 'Skógar', coords: { latitude: 63.5320, longitude: -19.5114 } },
+            { name: 'Siglufjörður', coords: { latitude: 66.1510, longitude: -18.9074 } },
+        ];
+
+        let currentLocation = null;
+
+        const map = new OSMBuildings({
+            container: 'map',
+            position: { latitude: 64.1355, longitude: -21.8954 },
+            zoom: 18,
+            tilt: 45,
+            rotation: 45,
+            minZoom: 15,
+            maxZoom: 20,
+            attribution: '© OpenStreetMap | © OSM Buildings'
+        });
+
+        map.addMapTiles('https://tile.openstreetmap.org/{z}/{x}/{y}.png');
+        map.addGeoJSONTiles('https://{s}.data.osmbuildings.org/0.2/59fcc2e8/tile/{z}/{x}/{y}.json');
+
+        function loadNewLocation() {
+            // Pick a random location
+            currentLocation = locations[Math.floor(Math.random() * locations.length)];
+
+            // Update the map position
+            map.setPosition(currentLocation.coords);
+
+            // Generate 5 options, including the correct one
+            const optionsContainer = document.getElementById('options');
+            optionsContainer.innerHTML = ''; // Clear previous options
+
+            // Select 4 random incorrect locations
+            let incorrectLocations = locations
+                .filter(location => location.name !== currentLocation.name)
+                .sort(() => 0.5 - Math.random())
+                .slice(0, 4);
+
+            // Combine with the correct location and shuffle
+            let choices = [...incorrectLocations, currentLocation].sort(() => 0.5 - Math.random());
+
+            choices.forEach((location) => {
+                const button = document.createElement('button');
+                button.textContent = location.name;
+                button.classList.add('option');
+                button.onclick = () => checkAnswer(location.name);
+                optionsContainer.appendChild(button);
+            });
+
+            // Hide feedback and next button
+            document.getElementById('feedback').textContent = '';
+            document.getElementById('next-btn').style.display = 'none';
+        }
+
+        function checkAnswer(selectedName) {
+            const feedback = document.getElementById('feedback');
+            if (selectedName === currentLocation.name) {
+                feedback.textContent = 'Correct!';
+                feedback.style.color = 'green';
+            } else {
+                feedback.textContent = `Wrong! The correct answer was ${currentLocation.name}.`;
+                feedback.style.color = 'red';
+            }
+
+            // Show next button
+            document.getElementById('next-btn').style.display = 'block';
+        }
+
+        document.getElementById('next-btn').onclick = loadNewLocation;
+
+        // Initialize the first location
+        loadNewLocation();
+    </script>
+</body>
+</html>
