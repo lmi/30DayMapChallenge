@@ -47,9 +47,9 @@ Each day of the challenge presents a unique theme. Below, you can find links to 
 | 19 | Typography | Let text do the work with a typography-focused map. ✍️🅰️ | ![Day 19](Day-19/Day19-Typography_ISL.png) |
 | 20 | OpenStreetMap | Use OpenStreetMap data to create a map. 🗺️📍 | [![Day 20 - OpenStreetMap](Day-20/Day20-OpenStreetMap.gif)](https://m-lmi.github.io/30DayMapChallenge/Day-20/index.html) |
 | 21 | Conflict | Map a conflict, highlighting boundaries, tensions, or outcomes. ⚔️🛑 | ![Day 21](Day-21/Day21-Conflict.png) |
-| 22 | 2 colours | Restrict yourself to only 2 colors for a minimalist map. | ![Day 22](Day-22/Day22-2-colours.png) |
+| 22 | 2 colours | Restrict yourself to only 2 colors for a minimalist map. | ![Day 22](Day-22/Day22-TwoColors.png) |
 | 23 | Memory | Map a place from memory—no need for accuracy, just creativity! 💭🗺️ | ![Day 23](Day-23/Day23-Memory.png) |
-| 24 | Only circular shapes | Stick to circular shapes for a unique mapping approach. 🔵⭕ | ![Day 24](Day-24/Day24-Circles.png) |
+| 24 | Only circular shapes | Stick to circular shapes for a unique mapping approach. 🔵⭕ | ![Day 24](Day-24/Day24-OnlyCircularShapes.png) |
 | 25 | Heat | Map something related to heat, like temperature or intensity areas. 🔥🌡️ | ![Day 25](Day-25/Day25-Heat.png) |
 | 26 | Map projections | Play with map projections, from Mercator to Butterfly. | ![Day 26](Day-26/Day26-Projections.png) |
 | 27 | Micromapping | Zoom in to map something small and detailed. 🧐🔍 | ![Day 27](Day-27/Day27-Micromapping.png) |
