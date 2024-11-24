@@ -49,7 +49,7 @@ Each day of the challenge presents a unique theme. Below, you can find links to 
 | 21 | Conflict | Map a conflict, highlighting boundaries, tensions, or outcomes. ⚔️🛑 | ![Day 21](Day-21/Day21-Conflict.png) |
 | 22 | 2 colours | Restrict yourself to only 2 colors for a minimalist map. | ![Day 22](Day-22/Day22-TwoColors.png) |
 | 23 | Memory | Map a place from memory—no need for accuracy, just creativity! 💭🗺️ | ![Day 23](Day-23/Day23-Memory.png) |
-| 24 | Only circular shapes | Stick to circular shapes for a unique mapping approach. 🔵⭕ | ![Day 24](Day-24/Day24-OnlyCircularShapes.png) |
+| 24 | Only circular shapes | Stick to circular shapes for a unique mapping approach. 🔵⭕ | ![Day 24](Day-24/Day24-OnlyCircularShapes_ISL.png) |
 | 25 | Heat | Map something related to heat, like temperature or intensity areas. 🔥🌡️ | ![Day 25](Day-25/Day25-Heat.png) |
 | 26 | Map projections | Play with map projections, from Mercator to Butterfly. | ![Day 26](Day-26/Day26-Projections.png) |
 | 27 | Micromapping | Zoom in to map something small and detailed. 🧐🔍 | ![Day 27](Day-27/Day27-Micromapping.png) |
