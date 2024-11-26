@@ -51,7 +51,7 @@ Each day of the challenge presents a unique theme. Below, you can find links to 
 | 23 | Memory | Map a place from memory—no need for accuracy, just creativity! 💭🗺️ | ![Day 23](Day-23/Day23-Memory.png) |
 | 24 | Only circular shapes | Stick to circular shapes for a unique mapping approach. 🔵⭕ | ![Day 24](Day-24/Day24-OnlyCircularShapes_ISL.png) |
 | 25 | Heat | Map something related to heat, like temperature or intensity areas. 🔥🌡️ | ![Day 25](Day-25/Day25-Heat.png) |
-| 26 | Map projections | Play with map projections, from Mercator to Butterfly. | ![Day 26](Day-26/Day26-Projections.png) |
+| 26 | Map projections | Play with map projections, from Mercator to Butterfly. | ![Day 26](Day-26/Day26-Projection.jpg) |
 | 27 | Micromapping | Zoom in to map something small and detailed. 🧐🔍 | ![Day 27](Day-27/Day27-Micromapping.png) |
 | 28 | The blue planet | Focus on water—oceans, rivers, or lakes. 🌊🐋 | ![Day 28](Day-28/Day28-Blue-planet.png) |
 | 29 | Overture | Use data from the Overture Maps Foundation for a fresh perspective. 🌍📊 | ![Day 29](Day-29/Day29-Overture.png) |
