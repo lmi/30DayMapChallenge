@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Eagle+Lake:wght@400;600&display=swap" rel="stylesheet">
+    <title>Fern and Temperature in Deildartunguhver</title>
+    <style>
+        /* Add fern-inspired styling font */
+        body {
+            display: flex;
+            margin: 0;
+            font-family: "Eagle Lake", serif;
+            background-color: #e8f5e9; /* Light pastel green background */
+            color: #2e7d32; /* Default text color, dark green */
+        }
+        .sidebar {
+            width: 40%;
+            padding: 20px;
+            background-color: #89bd9e; /* Fern-inspired pastel green for sidebar */
+            border-right: 1px solid #88c399; /* Slightly darker green border */
+            box-sizing: border-box;
+            color: #2e7d32; /* Sidebar text color */
+        }
+        .content {
+            width: 66%;
+            overflow: hidden;
+            box-sizing: border-box;
+            background-color: #a8d5ba; /* Matches the body background */
+        }
+        .sidebar h2 {
+            margin-top: 10;
+            color: #1b5e20; /* Very dark green for headings */
+            font-weight: 600; /* Slightly bolder for headings */
+            font-size: 30px;
+        }
+        .sidebar p {
+            color: #33691e; /* Medium-dark green for paragraph text */
+            font-size: 25px;
+        }
+        .sidebar img {
+            max-width: 100%;
+            height: auto;
+            margin-top: 20px;
+            border-radius: 5px; /* Rounded corners for images */
+            border: 2px solid #88c399; /* Border for images */
+        }
+        a {
+            color: #388e3c; /* Green for links */
+            text-decoration: none;
+            font-weight: 600; /* Make links slightly bolder */
+        }
+        a:hover {
+            color: #1b5e20; /* Darker green for links on hover */
+        }
+        .iframe-container {
+            width: 100%;
+            height: 100vh;
+            border: none;
+        }
+        .language-switcher {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            z-index: 1000;
+            display: flex;
+            gap: 10px;
+        }
+        .language-switcher img {
+            cursor: pointer;
+            width: 40px;
+            height: 30px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="language-switcher">
+    <img src="\Day-27\img\GB.png" alt="English" id="enFlag">
+    <img src="\Day-27\img\IS.png" alt="Icelandic" id="isFlag">
+</div>
+
+<div class="sidebar">
+    <div>
+        <h2 id="title">Struthiopteris fallax surfing the temperature wave</h2>
+        <p id="para1">
+            <em>Struthiopteris fallax</em> is Iceland’s very own hot-spring-loving fern! Found only at Deildartunguhver, this tiny plant thrives in the warm, steamy soil near Iceland’s famous hot spring. Despite its cozy habitat, it's considered endangered in Iceland, with a very limited population.
+        </p>
+        <p id="para2">
+            This project maps the micro-temperature landscape around <em>Deildartunguhver</em>, showing how <em>S. fallax</em> “surfs” the geothermal heat. Data collected in 2021 from a 100 m² grid records each plant’s location and temperature to reveal how this unique fern survives its intense, heated home.
+        </p>
+    </div>
+    
+    <p id="learnMore">To learn more, <a href="https://www.ni.is/is/biota/plantae/tracheophyta/polypodiopsida/blechnaceae/tunguskollakambur-struthiopteris-spicant-var" target="_blank">click here</a>.</p>
+    <img src="\Day-27\img\300.gif" alt="Image" />
+
+    <div class="footer">
+        <p id="footer" style="font-size: 18px; color: #023305; text-align: center;">
+            #30DayMapChallenge | Author: Marco Pizzolato | Data: Pawel Wasowicz, Náttúrufræðistofnun
+        </p>
+    </div>    
+</div>
+
+<div class="content">
+    <iframe src="map.html" class="iframe-container"></iframe>
+</div>
+
+
+<script>
+    const translations = {
+        en: {
+            title: "Struthiopteris fallax surfing the temperature wave",
+            para1: "<em>Struthiopteris fallax</em> is Iceland’s very own hot-spring-loving fern! Found only at Deildartunguhver, this tiny plant thrives in the warm, steamy soil near Iceland’s famous hot spring. Despite its cozy habitat, it's considered endangered in Iceland, with a very limited population.",
+            para2: "This project maps the micro-temperature landscape around <em>Deildartunguhver</em>, showing how <em>S. fallax</em> “surfs” the geothermal heat. Data collected in 2021 from a 100 m² grid records each plant’s location and temperature to reveal how this unique fern survives its intense, heated home.",
+            learnMore: 'To learn more, <a href="https://www.ni.is/is/biota/plantae/tracheophyta/polypodiopsida/blechnaceae/tunguskollakambur-struthiopteris-spicant-var" target="_blank">click here</a>.'
+        },
+        is: {
+            title: "Struthiopteris fallax í hitabylgju",
+            para1: "<em>Struthiopteris fallax</em> er einstök íslensk burknategund sem elskar hverasvæði! Hún finnst aðeins við Deildartunguhver, þar sem hún dafnar í heitum, gufandi jarðveginum við hverinn. Þrátt fyrir þessa einstöku aðlögun er hún í útrýmingarhættu á Íslandi, með mjög takmarkaða stofnstærð.",
+            para2: "Þessi rannsókn kortleggur hitastigsmynstur í smáum skala í kringum <em>Deildartunguhver</em>. Hún sýnir hvernig <em>S. fallax</em> nýtir sér jarðhita. Gögn sem voru safnað árið 2021 úr 100 m² neti skrásetja staðsetningu hverrar plöntu og hita til að sýna hvernig þessi sérstaka burknategund lifir af í þessu einstaka, heita umhverfi.",
+            learnMore: 'Til að læra meira, <a href="https://www.ni.is/is/biota/plantae/tracheophyta/polypodiopsida/blechnaceae/tunguskollakambur-struthiopteris-spicant-var" target="_blank">smelltu hér</a>.'
+        }
+    };
+
+    const titleElement = document.getElementById('title');
+    const para1Element = document.getElementById('para1');
+    const para2Element = document.getElementById('para2');
+    const learnMoreElement = document.getElementById('learnMore');
+
+    document.getElementById('enFlag').addEventListener('click', () => {
+        updateLanguage('en');
+    });
+
+    document.getElementById('isFlag').addEventListener('click', () => {
+        updateLanguage('is');
+    });
+
+    function updateLanguage(lang) {
+        const translation = translations[lang];
+        titleElement.innerHTML = translation.title;
+        para1Element.innerHTML = translation.para1;
+        para2Element.innerHTML = translation.para2;
+        learnMoreElement.innerHTML = translation.learnMore;
+    }
+</script>
+
+</body>
+</html>
