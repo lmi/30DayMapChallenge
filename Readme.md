@@ -53,7 +53,7 @@ Each day of the challenge presents a unique theme. Below, you can find links to 
 | 25 | Heat | Map something related to heat, like temperature or intensity areas. 🔥🌡️ | ![Day 25](Day-25/Day25-Heat.png) |
 | 26 | Map projections | Play with map projections, from Mercator to Butterfly. | ![Day 26](Day-26/Day26-Projection.jpg) |
 | 27 | Micromapping | Zoom in to map something small and detailed. 🧐🔍 | ![Day 27](Day-27/Day27-MicroMapping_EN.png) |
-| 28 | The blue planet | Focus on water—oceans, rivers, or lakes. 🌊🐋 | ![Day 28](Day-28/Day28-Blue-planet.png) |
+| 28 | The blue planet | Focus on water—oceans, rivers, or lakes. 🌊🐋 | ![Day 28](Day-28/Day28-BluePlanet.png) |
 | 29 | Overture | Use data from the Overture Maps Foundation for a fresh perspective. 🌍📊 | ![Day 29](Day-29/Day29-Overture.png) |
 | 30 | The final map | Finish strong with any map you choose! Celebrate your creativity. 🎉🌐 | ![Day 30](Day-30/Day30-Final-map.png) |
 
