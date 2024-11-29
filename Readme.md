@@ -57,6 +57,6 @@ Each day of the challenge presents a unique theme. Below, you can find links to 
 | 29 | Overture | Use data from the Overture Maps Foundation for a fresh perspective. 🌍📊 | ![Day 29](Day-29/Day29-Overture.png) |
 | 30 | The final map | Finish strong with any map you choose! Celebrate your creativity. 🎉🌐 | ![Day 30](Day-30/Day30-Final-map.png) |
 
----
+--- 
 
 Happy Mapping! 🎉 Each day’s map explores a new technique or theme, offering fresh ways to visualize data and tell a story through maps. We hope this repository inspires you to dive into mapping and experiment with different styles and data sources.
