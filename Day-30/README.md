@@ -35,3 +35,4 @@ Bedrock geological maps of Iceland form the foundation of our knowledge of the c
 ---
 
 ![Day 30 - Final Map](Day30_FinalMap_highRes_v2.jpg)
+![Day 30 - Final Map Version 1](Day30_FinalMap_highRes_v1.jpg)
