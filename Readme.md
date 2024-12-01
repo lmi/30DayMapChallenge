@@ -55,7 +55,7 @@ Each day of the challenge presents a unique theme. Below, you can find links to 
 | 27 | Micromapping | Zoom in to map something small and detailed. 🧐🔍 | ![Day 27](Day-27/Day27-MicroMapping_EN.png) |
 | 28 | The blue planet | Focus on water—oceans, rivers, or lakes. 🌊🐋 | ![Day 28](Day-28/Day28-BluePlanet.png) |
 | 29 | Overture | Use data from the Overture Maps Foundation for a fresh perspective. 🌍📊 | ![Day 29](Day-29/Day29-Overture.png) |
-| 30 | The final map | Finish strong with any map you choose! Celebrate your creativity. 🎉🌐 | ![Day 30](Day-30/Day30-Final-map.png) |
+| 30 | The final map | Finish strong with any map you choose! Celebrate your creativity. 🎉🌐 | ![Day 30](Day-30/Day30_FinalMap_highRes_v2.jpg) |
 
 --- 
 
