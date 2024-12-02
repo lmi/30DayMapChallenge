@@ -55,7 +55,7 @@ A great reminder of how projections shape our understanding of geography! 📍
 ### Data Sources
 - **Projection Data**: Various map projections  
 - 🌍 **Geographic Data**: Náttúrufræðistofnun  
-- 🗺️ **Tools**: QGIS, Python  
+- 🗺️ **Tools**: ArcPro  
 
 ---
 
